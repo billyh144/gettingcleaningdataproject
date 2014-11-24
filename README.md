@@ -13,13 +13,13 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 You should create one R script called run_analysis.R that does the following.
 
-Merges the training and the test sets to create one data set.
+** Merges the training and the test sets to create one data set.
 - Cbind() was used to attach the subject and activity data to the train and test data. Rbind() was used to join the train and test data together to create one data set.
-Extracts only the measurements on the mean and standard deviation for each measurement.
+** Extracts only the measurements on the mean and standard deviation for each measurement.
 - The grep() function was used to make sure only the mean() and std() were extracted. 68 Columns were found (with the first 2 being added as activity label and subject.
-Uses descriptive activity names to name the activities in the data set
+** Uses descriptive activity names to name the activities in the data set
 - Two columns were created at the beginning and joins the activity labels to give them descriptive names
-Appropriately labels the data set with descriptive variable names.
+** Appropriately labels the data set with descriptive variable names.
 - Used names() to assign them to the dataset, then created the name function, to give descriptive variable names
-From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+** From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 - Used the melt and dcast functions in the reshape2 library to create a tidy data set with the average of each variable for each activity and each subject.
